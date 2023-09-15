@@ -20,5 +20,18 @@ const deposit = () => {
     }
 }
 
+const getNumberOfLines = () => {
+    while (true) {
+        const lines = prompt("Enter a your lines(1-3): ");
+        const numberOfLines = parseInt(lines);
+        if (isNaN(numberOfLines) || numberOfLines <= 0 || numberOfLines > 3) {
+            console.log("Please enter a valid line!!!!")
+        } else {
+            return numberOfLines
+        }
+    }
+}
+
 const depositAmount = deposit();
-console.log(depositAmount)
+const numberOfLines = getNumberOfLines();
+
